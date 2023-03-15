@@ -1,0 +1,35 @@
+<!--
+  ~ Copyright © 2022-2023, DCCTech, Hungary
+  -->
+
+<div class="card-lists">
+
+  <div class="columns">
+
+    <div *ngFor="let cardList of cardLists" class="column bg is-2 panel cardLists">
+      <div class="panel-heading">
+        <div class="heading-content">
+          <div class="card-title">{{cardList.name}}</div>
+          <a (click)="onArchive(cardList)" class="arch">
+            <span title="Click to archive">
+              <span class="fas fa-archive"></span>
+            </span>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="panel-block panel-bg ">
+        <nb-card [cardListLink]="cardList.selfLink"></nb-card>
+      </div>
+
+    </div>
+
+    <div class="column box input-bg is-narrow">
+      <nb-new-card-list (created)="onCreated()" [boardId]="boardId"></nb-new-card-list>
+    </div>
+
+
+  </div>
+
+</div>

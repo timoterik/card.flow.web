@@ -1,0 +1,31 @@
+/*!
+ * Copyright © 2022-2023, DCCTech, Hungary
+ */
+
+.title {
+  margin: 3vmin;
+  display: inline;
+}
+
+.go-back {
+  margin: 3vmin;
+}
+
+.go-back:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.board-header {
+  position: relative;
+  width: 100vh;
+}
+
+.b-name {
+  padding-top: 0.3em;
+  padding-left: 0.3em;
+}
+
+.subtitle:first-child {
+  margin-bottom: 0.5rem;
+}

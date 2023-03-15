@@ -1,0 +1,21 @@
+<!--
+  ~ Copyright © 2022-2023, DCCTech, Hungary
+  -->
+
+<form (submit)="saveNewCardList($event)" id="new-card-list-form">
+  <div class="input-pad">
+    <input [(ngModel)]="name"
+           class="input is-small"
+           id="name"
+           name="name"
+           placeholder="Add new List"
+           type="text"
+    >
+  </div>
+  <div class="but-mar">
+    <button (click)="saveNewCardList($event)" class="button is-success" id="new-card-list-submit" type="submit">Save
+    </button>
+    <button (click)="cancelNewCardList()" class="button is-danger" id="new-card-list-cancel" type="reset">Cancel
+    </button>
+  </div>
+</form>

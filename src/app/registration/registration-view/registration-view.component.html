@@ -1,0 +1,34 @@
+<!--
+  ~ Copyright © 2022-2023, DCCTech, Hungary
+  -->
+
+<section class="hero is-fullheight">
+  <div class="hero-body">
+    <div class="container box">
+      <h1 class="title">Registration</h1>
+      <form #form="ngForm" (submit)="onSubmit()" action="#">
+        <nb-form-input [icon]="'user-secret'" [inputId]="'username'" [label]="'Username'">
+          <input [(ngModel)]="username" class="input" id="username" name="username" required type="text">
+        </nb-form-input>
+        <nb-form-input [icon]="'key'" [inputId]="'password'" [label]="'Password'">
+          <input [(ngModel)]="password" class="input" id="password" name="password" required type="password">
+        </nb-form-input>
+        <nb-form-input [icon]="'user'" [inputId]="'firstName'" [label]="'First Name'">
+          <input [(ngModel)]="firstName" class="input" id="firstName" name="firstName" required type="text">
+        </nb-form-input>
+        <nb-form-input [icon]="'user'" [inputId]="'lastName'" [label]="'Last Name'">
+          <input [(ngModel)]="lastName" class="input" id="lastName" name="lastName" required type="text">
+        </nb-form-input>
+        <nb-image-uploader (uploadInProgress)="onUploadProgress($event)"
+                           (uploadedImage)="onUpload($event)"></nb-image-uploader>
+
+
+        <div class="field is-grouped is-grouped-right">
+          <div class="control">
+            <button [disabled]="form.invalid || uploadInProgress" class="button is-success" id="signUp">Sign Up</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

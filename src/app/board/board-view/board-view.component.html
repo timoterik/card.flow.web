@@ -1,0 +1,16 @@
+<!--
+  ~ Copyright © 2022-2023, DCCTech, Hungary
+  -->
+
+<nb-template>
+  <div class="board-header">
+    <h2 (click)="editStarted()" *ngIf="!editName" class="subtitle is-2 b-name">{{board?.name}}</h2>
+    <nb-board-edit-name (editCancelled)="editFinished($event)" (nameEdited)="editFinished($event)" *ngIf="editName"
+                        [board]="board"></nb-board-edit-name>
+    <nb-board-menu [board]="board"></nb-board-menu>
+  </div>
+  <nb-cardlist-view (cardListCreated)="refreshCardLists()"
+                    [boardId]="boardId"
+                    [cardLists]="cardLists">
+  </nb-cardlist-view>
+</nb-template>

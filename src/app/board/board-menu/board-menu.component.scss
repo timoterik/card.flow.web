@@ -1,0 +1,63 @@
+/*!
+ * Copyright © 2022-2023, DCCTech, Hungary
+ */
+
+.menu {
+  position: absolute;
+  right: 0;
+  width: 20vmax;
+
+  ul li {
+    padding: 10px;
+  }
+}
+
+.listItem:hover {
+  text-decoration: underline;
+  background: aliceblue;
+  cursor: pointer;
+}
+
+.showMenu {
+  position: absolute;
+  right: 0;
+  margin-right: 5px;
+}
+
+.showMenu:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.close {
+  display: inline;
+  right: 10px;
+  font-weight: 600;
+  position: absolute;
+}
+
+.close:hover {
+  cursor: pointer;
+  font-weight: 800;
+}
+
+div {
+  display: inline;
+  top: 0;
+}
+
+ul {
+  border-top: 1px solid aquamarine;
+}
+
+p {
+  padding-left: 15px;
+}
+
+.menuDiv {
+  font-size: larger;
+}
+
+.membersView {
+  margin-top: 3vmin;
+}

@@ -1,0 +1,31 @@
+<!--
+  ~ Copyright © 2022-2023, DCCTech, Hungary
+  -->
+
+<nb-template>
+  <div class="boards">
+    <div *ngFor="let board of boards" class="flex-item">
+      <div (click)="onSelect(board)" class="card">
+        <div class="card-content">
+          <p class="title">
+            {{board.name}}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div (click)="creationStarted()" *ngIf="!create" class="flex-item board-create">
+      <div class="card">
+        <div class="card-content">
+          <p>Create a new board +</p>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="create" class="flex-item board-create">
+      <div class="card">
+        <div class="card-content">
+          <nb-board-create (creationEnded)="endCreation()" *ngIf="create"></nb-board-create>
+        </div>
+      </div>
+    </div>
+  </div>
+</nb-template>

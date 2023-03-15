@@ -1,0 +1,14 @@
+<!--
+  ~ Copyright © 2022-2023, DCCTech, Hungary
+  -->
+
+<form (submit)="createBoard()">
+  <div class="field">
+    <label class="label" for="boardName">Board Name</label>
+    <div class="control has-icons-left">
+      <input [(ngModel)]="boardName" id="boardName" name="boardName" required type="text">
+    </div>
+  </div>
+  <button class="button is-primary" type="submit">Create Board</button>
+  <button (click)="cancelCreation()" class="button cancel" type="button">Cancel</button>
+</form>

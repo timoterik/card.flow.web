@@ -1,0 +1,26 @@
+<!--
+  ~ Copyright © 2022-2023, DCCTech, Hungary
+  -->
+
+<div class="card editcard">
+  <div class="card-content">
+    <div class="content">
+      <div class="field">
+        <div class="control">
+          <textarea #cardTitleInput (input)='onInput(cardTitleInput.value)' (keyup.enter)="onAddCard()" [value]="cardTitle"
+                    class="textarea" placeholder="Card Title"></textarea>
+        </div>
+        <br>
+        <a (click)="onAddCard()" class="button is-primary" id="create">Hozzáadás</a>
+        <a (click)="onCancel()" class="button is-danger is-outlined" id="cancel">
+          <div>
+            <span>Cancel</span>
+            <span class="icon is-small">
+              <i class="fas fa-times"></i>
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

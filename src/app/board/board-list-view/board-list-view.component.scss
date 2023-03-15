@@ -1,0 +1,39 @@
+/*!
+ * Copyright © 2022-2023, DCCTech, Hungary
+ */
+
+@import "~bulma/sass/utilities/initial-variables";
+
+.boards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (min-width: 426px) {
+    flex-direction: row;
+  }
+}
+
+.flex-item {
+  padding: 5px;
+
+  @media (min-width: 426px) {
+    width: 50%;
+  }
+
+  @media (min-width: $tablet) {
+    width: 25%;
+  }
+
+  @media (min-width: $widescreen) {
+    width: 20%;
+  }
+
+  min-height: 15vmin;
+
+  .card {
+    cursor: pointer;
+    height: 100%;
+  }
+}
+

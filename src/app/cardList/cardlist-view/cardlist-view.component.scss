@@ -1,0 +1,96 @@
+/*!
+ * Copyright © 2022-2023, DCCTech, Hungary
+ */
+
+.card-lists {
+  padding: 1em;
+}
+
+.bg {
+  margin: 0.5em;
+  width: 200px;
+  padding: 0;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.input-bg {
+  margin: 0.5em;
+  width: 200px;
+  padding: 0;
+  max-height: 90px;
+
+}
+
+.panel-bg {
+  background-color: white;
+}
+
+.panel-heading {
+
+  padding-top: 0.9em;
+  padding-bottom: 1.2em;
+}
+
+
+.heading-content {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.arch {
+  text-decoration: none;
+  flex: 1;
+  color: #4a4a4a;;
+
+  padding-top: 0.9em;
+  padding-bottom: 1.2em;
+}
+
+.arch:hover {
+  color: #a8e4a0;
+  cursor: pointer;
+}
+
+
+.card-title {
+  flex: 16;
+  padding-right: 0.5rem;
+}
+
+
+@media screen and (max-width: 455px) {
+
+  .columns.is-desktop {
+    display: flex;
+    // overflow-y: scroll;
+    flex-wrap: wrap;
+    padding-right: 1em;
+    // &::-webkit-scrollbar {
+    //  display: none;
+    // }
+  }
+
+  .card-lists {
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .bg {
+    width: 100%;
+  }
+
+  .input-bg {
+    width: 100%;
+  }
+
+}
+
+
+

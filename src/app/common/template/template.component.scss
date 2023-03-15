@@ -1,0 +1,29 @@
+/*!
+ * Copyright © 2022-2023, DCCTech, Hungary
+ */
+
+.mar {
+  margin-left: 0.25em;
+  margin-top: 0.3em;
+}
+
+.notiz {
+  color: #a8e4a0;
+}
+
+h1 {
+  line-height: 1;
+}
+
+.board-bg {
+  background-color: #a8e4a0;
+  height: calc(100vh - 3rem - 0.3em - 1.25rem);
+  padding: 0;
+  overflow: auto;
+}
+
+.hero-body > div {
+  flex: 1;
+  align-self: stretch;
+  padding: 5px;
+}

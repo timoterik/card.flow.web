@@ -1,0 +1,29 @@
+<!--
+  ~ Copyright © 2022-2023, DCCTech, Hungary
+  -->
+
+<div class="wrapper">
+  <div [dragulaModel]="cards" [dragula]="'cards'" id="sortable">
+    <div *ngFor="let card of cards" attr.data-self-link="{{card.selfLink}}" class="card">
+      <div class="card-content">
+        <div class="content">
+          <h4>{{card.title}}</h4>
+          <a (click)="onArchiveCard(card)" class="button is-primary card-archive">Archiválás</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div [ngSwitch]='viewMode'>
+  <div (click)="addCard()" *ngSwitchDefault class="card">
+    <div class="card-content">
+      <div class="content">
+        <h4>Kártya hozzáadása...</h4>
+      </div>
+    </div>
+  </div>
+  <nb-card-add (cancelled)="onAddCancelled()" (created)="onCreated($event)" *ngSwitchCase="'cardAdd'"
+               [cardListLink]="cardListLink"
+               [pos]="maxPos+65536"></nb-card-add>
+</div>
+

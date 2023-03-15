@@ -1,0 +1,31 @@
+<!--
+  ~ Copyright © 2022-2023, DCCTech, Hungary
+  -->
+
+<div (click)="displayMenu()" *ngIf="menuHidden" class="showMenu">Show menu</div>
+
+<div *ngIf="!menuHidden" class="menu">
+  <div>
+    <div>
+      <div class="menu-label">Menu</div>
+      <!--<div class="close" (click)="hideMenu()">X</div>-->
+      <span (click)="hideMenu()" class="icon">
+        <span class="fas fa-times"></span>
+      </span>
+    </div>
+    <ul class="menu-list">
+      <li class="listItem">Archive board</li>
+      <li (click)="showMembers()" *ngIf="!membersView" class="listItem">Show members</li>
+      <li *ngIf="membersView">
+        <div class="membersView">
+          <div>
+            <div>Members</div>
+            <div (click)="hideMembers()" class="close">X</div>
+          </div>
+          <nb-user-list *ngFor="let member of board.memberships" [user]="member.user"></nb-user-list>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+

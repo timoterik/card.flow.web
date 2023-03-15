@@ -1,0 +1,17 @@
+/*!
+ * Copyright © 2022-2023, DCCTech, Hungary
+ */
+
+/* You can add global styles to this file, and also import other style files */
+@import "~@fortawesome/fontawesome/styles.css";
+@import "~bulma/bulma";
+@import "~dragula/dist/dragula.min.css";
+
+.gu-mirror {
+  cursor: grabbing !important;
+  transform: rotate(5deg);
+}
+
+.gu-transit {
+  cursor: grabbing !important;
+}

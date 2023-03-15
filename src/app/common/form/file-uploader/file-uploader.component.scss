@@ -1,0 +1,19 @@
+/*!
+ * Copyright © 2022-2023, DCCTech, Hungary
+ */
+
+:host {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.file-name {
+  max-width: initial;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.file-label {
+  width: 100%;
+}

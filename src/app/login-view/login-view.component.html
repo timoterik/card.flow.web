@@ -1,0 +1,28 @@
+<!--
+  ~ Copyright © 2022-2023, DCCTech, Hungary
+  -->
+
+<section class="hero is-fullheight">
+  <div class="hero-body">
+    <div class="container box">
+      <h1 class="title">Login</h1>
+      <form #form="ngForm" (submit)="onSubmit()" action="#">
+        <nb-form-input [icon]="'user'" [inputId]="'username'" [label]="'Username'">
+          <input [(ngModel)]="username" class="input" id="username" name="username" required type="text">
+        </nb-form-input>
+        <nb-form-input [icon]="'key'" [inputId]="'password'" [label]="'Password'">
+          <input [(ngModel)]="password" class="input" id="password" name="password" required type="password">
+        </nb-form-input>
+        <div class="field is-grouped is-grouped-right">
+          <div class="control">
+            <button class="button is-info" id="registration" routerLink="/registration" type="button">Registration
+            </button>
+          </div>
+          <div class="control">
+            <button [disabled]="form.invalid" class="button is-success" id="login" type="submit">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

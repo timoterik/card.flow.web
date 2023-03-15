@@ -1,0 +1,16 @@
+<!--
+  ~ Copyright © 2022-2023, DCCTech, Hungary
+  -->
+
+<div>
+  <form (submit)="onNameModify()">
+    <div>
+      <label for="rename">Rename board</label>
+      <div>
+        <input [(ngModel)]="board.name" class="input" id="rename" name="rename" required>
+      </div>
+    </div>
+    <button class="button is-primary" type="submit">Rename</button>
+    <button (click)="onCancel()" class="button cancel" type="button">Cancel</button>
+  </form>
+</div>
